@@ -12,7 +12,7 @@ export class SailthruUtil {
     }
 
     static md5(data) {
-        md5 = crypto.createHash('md5');
+        let md5 = crypto.createHash('md5');
         md5.update(data, 'utf8');
         return md5.digest('hex');
     }
