@@ -19,8 +19,8 @@ export class SailthruUtil {
 
     static extractParamValues(params) {
         var values = [];
-        for (k in params) {
-            v = params[k];
+        for (let k in params) {
+            let v = params[k];
             // console.log(v)
             if (v instanceof Array) {
                 let temp = SailthruUtil.extractParamValues(v);
