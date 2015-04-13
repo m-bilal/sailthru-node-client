@@ -32,8 +32,6 @@ function log2(string) {
 Private class to make HTTP request
  */
 class SailthruRequest {
-    static valid_methods = ['GET', 'POST', 'DELETE'];
-
     _http_request(uri, data, method, callback, binary_data_params = []) {
         let parse_uri = url.parse(uri),
             options = {host: parse_uri.host,
@@ -107,12 +105,9 @@ class SailthruRequest {
         return this._http_request(uri, data, request_method, callback, binary_data_params);
     }
 }
+SailthruRequest.valid_methods = ['GET', 'POST', 'DELETE'];
 
 class SailthruClient {
-    /*
-    By default enable logging
-     */
-    static logging = true;
 
     constructor(api_key, api_secret, api_url = false) {
         this.api_key = api_key;
@@ -457,6 +452,12 @@ class SailthruClient {
         }
     }
 }
+/*
+ By default enable logging
+ */
+SailthruClient.logging = true;
+
+
 
 // Public API for creating *SailthruClient*
 export function createSailthruClient(...args) {
