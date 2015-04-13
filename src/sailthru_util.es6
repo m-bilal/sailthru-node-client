@@ -1,6 +1,6 @@
-import * as crypto from 'crypto';
-import * as util from 'util'
-import VERSION from './sailthru'
+let crypto = require('crypto'),
+    util = require('util');
+import VERSION from './sailthru';
 
 export class SailthruUtil {
     static getSignatureHash(params, secret) {

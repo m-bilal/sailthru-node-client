@@ -1,9 +1,9 @@
-import * as http from 'http'
-import * as https from 'https'
-import * as url from 'url'
-import * as querystring from 'querystring'
-import * as rest from 'restler'
-import * as fs from 'fs'
+let http = require('http'),
+    https = require('https'),
+    url = require('url'),
+    querystring = require('querystring'),
+    rest = require('restler'),
+    fs = require('fs');
 
 /*
 API client version
@@ -17,6 +17,8 @@ let LOGGING = true;
 
 const USER_AGENT = 'Sailthru API Node/JavaScript Client';
 
+//import SailthruUtil from './sailthru_util';
+//import log from './sailthru_util';
 import {SailthruUtil, log} from './sailthru_util';
 
 /*
@@ -433,7 +435,7 @@ class SailthruClient {
     // Postback API Methods
     receiveOptoutPost(params) {
         if (typeof params === 'undefined') {
-            return false
+            return false;
         }
         for (let param in ['action', 'email', 'sig']) {
             if (typeof params[param] === 'undefined') {
