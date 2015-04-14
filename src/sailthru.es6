@@ -437,7 +437,7 @@ class SailthruClient {
         if (typeof params === 'undefined') {
             return false;
         }
-        for (let param in ['action', 'email', 'sig']) {
+        for (let param of ['action', 'email', 'sig']) {
             if (typeof params[param] === 'undefined') {
                 return false;
             }
