@@ -1,5 +1,5 @@
-let crypto = require('crypto'),
-    util = require('util');
+import crypto from 'crypto';
+import util from 'util';
 import VERSION from './sailthru';
 
 export class SailthruUtil {

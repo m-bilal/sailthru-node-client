@@ -1,9 +1,9 @@
-let http = require('http'),
-    https = require('https'),
-    url = require('url'),
-    querystring = require('querystring'),
-    rest = require('restler'),
-    fs = require('fs');
+import http from 'http';
+import https from 'https';
+import url from 'url';
+import querystring from 'querystring';
+import rest from 'restler';
+import fs from 'fs';
 
 /*
 API client version
