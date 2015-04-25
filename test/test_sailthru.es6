@@ -8,7 +8,7 @@ SailthruClient.disableLogging();
 SailthruClientBadUrl.disableLogging();
 
 export function receiveOptoutPost(test) {
-    test.expect(2);
+    test.expect(1);
 
     // Valid params
     let params1 = {action: 'optout',

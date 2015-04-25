@@ -17,8 +17,6 @@ let LOGGING = true;
 
 const USER_AGENT = 'Sailthru API Node/JavaScript Client';
 
-//import SailthruUtil from './sailthru_util';
-//import log from './sailthru_util';
 import {SailthruUtil, log} from './sailthru_util';
 
 /*
